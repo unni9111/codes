@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+   <head>
+	   <h2>MDM- Egg MilK Days calculation</h2>
+	           <script>
+         function add()
+         {
+           var num1, num2, sum,sumn,numn, bl3, bl4;
+           num1 = parseInt(document.getElementById("firstnumber").value);
+           findmd =num1 % 5;
+           if (findmd >2){
+			 md =  Math.floor(num1/5)*2+1;
+			 ed = Math.floor(num1/5)*1+1;
+		   } else {
+			 md =   Math.floor(num1/5)*2;
+			 ed =   Math.floor(num1/5)*1;
+			}
+           
+           document.getElementById("answer").value = md;
+            document.getElementById("answer1").value = ed;
+           
+           
+         }
+      </script>
+   </head>
+   <body>
+      <p>Feeding Days: <input id="firstnumber" maxlength="4" size="4"></p>
+           <button onclick="add()">Calculate</button>
+      <p>No of Days for Milk = <input id="answer" maxlength="4" size="4" "readonly"></p>
+        <p>No.of days for Egg= <input id="answer1" maxlength="4" size="4" "readonly"></p>
+      
+   </body>
+</html>
